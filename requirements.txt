@@ -1,1 +1,4 @@
-
+matplotlib
+jupyter
+lightning
+tensorboard
