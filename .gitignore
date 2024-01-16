@@ -134,3 +134,7 @@ dmypy.json
 # IDEs files and folders
 .idea/
 .vscode/
+
+assets/model_checkpoints/
+assets/stats/
+logs/*

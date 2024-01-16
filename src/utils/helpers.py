@@ -3,7 +3,9 @@ import numpy as np
 import torch
 
 
-def detect_device():
+def detect_device(debug=True):
+    if debug:
+        return "cpu"
     return (
         "cuda"
         if torch.cuda.is_available()

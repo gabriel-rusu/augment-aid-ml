@@ -3,14 +3,6 @@ from torch import nn
 
 
 class Generator(nn.Module):
-    '''
-    Generator Class
-    Values:
-        input_dim: the dimension of the input vector, a scalar
-        im_chan: the number of channels of the output image, a scalar
-              (CIFAR100 is in color (red, green, blue), so 3 is your default)
-        hidden_dim: the inner dimension, a scalar
-    '''
 
     def __init__(self, input_dim=10, im_chan=3, hidden_dim=64):
         super(Generator, self).__init__()
@@ -23,18 +15,7 @@ class Generator(nn.Module):
             self.make_gen_block(hidden_dim, im_chan, kernel_size=2, final_layer=True),
         )
 
-    def make_gen_block(self, input_channels, output_channels, kernel_size=3, stride=2, padding=0 , final_layer=False):
-        '''
-        Function to return a sequence of operations corresponding to a generator block of DCGAN;
-        a transposed convolution, a batchnorm (except in the final layer), and an activation.
-        Parameters:
-            input_channels: how many channels the input feature representation has
-            output_channels: how many channels the output feature representation should have
-            kernel_size: the size of each convolutional filter, equivalent to (kernel_size, kernel_size)
-            stride: the stride of the convolution
-            final_layer: a boolean, true if it is the final layer and false otherwise
-                      (affects activation and batchnorm)
-        '''
+    def make_gen_block(self, input_channels, output_channels, kernel_size=3, stride=2, padding=0, final_layer=False):
         if not final_layer:
             return nn.Sequential(
                 nn.ConvTranspose2d(input_channels, output_channels, kernel_size, stride, padding),
@@ -48,12 +29,6 @@ class Generator(nn.Module):
             )
 
     def forward(self, noise):
-        '''
-        Function for completing a forward pass of the generator: Given a noise tensor,
-        returns generated images.
-        Parameters:
-            noise: a noise tensor with dimensions (n_samples, input_dim)
-        '''
         x = noise.view(len(noise), self.input_dim, 1, 1)
         return self.gen(x)
 
