@@ -39,6 +39,9 @@ class VAE(nn.Module):
         z = mean + var * epsilon
         return z
 
+    def decode(self, z):
+        return self.decoder(z)
+
     def forward(self, x):
         mean, var = self.encode(x)
         z = self.reparameterization(mean, var)

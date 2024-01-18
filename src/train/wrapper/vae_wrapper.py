@@ -2,6 +2,7 @@ import lightning as L
 import torch
 import torchvision
 from torch.nn import functional as F
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 
 class VAEWrapper(L.LightningModule):
@@ -59,4 +60,14 @@ class VAEWrapper(L.LightningModule):
 
 
     def configure_optimizers(self):
-        return torch.optim.Adam(self.vae.parameters(), lr=1e-3)
+        optimizer = torch.optim.Adam(self.parameters(), lr=1e-3)
+        return {
+            "optimizer": optimizer,
+            "lr_scheduler": {
+                "scheduler": ReduceLROnPlateau(optimizer,'min', patience=3, min_lr=1e-6, verbose=True),
+                "monitor": "val_loss",
+                "frequency": 10
+                # If "monitor" references validation metrics, then "frequency" should be set to a
+                # multiple of "trainer.check_val_every_n_epoch".
+            },
+        }

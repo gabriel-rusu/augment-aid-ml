@@ -3,7 +3,7 @@ import numpy as np
 import torch
 
 
-def detect_device(debug=True):
+def detect_device(debug=False):
     if debug:
         return "cpu"
     return (

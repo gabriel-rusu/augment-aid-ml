@@ -7,7 +7,7 @@ from torch.nn import functional as F
 from src.train.utils.helpers import combine_sample
 
 
-class AugmentedTrainingWrapper(L.LightningModule):
+class GANAugmentedTrainingWrapper(L.LightningModule):
 
     def __init__(self, classifier, generator, z_dim, num_classes, display_every_n_steps=10, p_real=0.5):
         super().__init__()
