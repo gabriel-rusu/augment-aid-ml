@@ -42,7 +42,7 @@ Give examples
 ```
 
 ### Installing
-A step by step series of examples that tell you how to get a development env running.
+A step-by-step series of examples that tell you how to get a development env running.
 
 Say what the step will be
 
@@ -65,8 +65,8 @@ Add notes about how to use the system.
 Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
-- [PyTorch](https://pytorch.org/) - machine learning framework 
-- [Tensorflow](https://www.tensorflow.org/) - end-to-end open source machine learning platform
+- [PyTorch](https://pytorch.org/) - machine learning framework
+- [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) - deep learning framework
 - [Jupyter Notebook](https://jupyter.org/) - web application for creating and sharing computational documents
 
 ## 📑 Documentation <a name="documentation"></a>
