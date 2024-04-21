@@ -3,10 +3,10 @@
  <img width=200px height=200px src="./assets/logo.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Machine Learning Project Title</h3>
+<h3 align="center">AugmentAid</h3>
 
 
-<p align="center"> Few lines describing your project.
+<p align="center"> AugmentAid is a machine learning project focused on data augmentation techniques. The project aims to enhance the performance of machine learning models by artificially expanding the training dataset. By applying various transformations to the existing data, AugmentML can generate new, diverse examples that help improve model robustness and generalization.
     <br> 
 </p>
 
@@ -22,7 +22,9 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-Write about 1-2 paragraphs describing the purpose of your project.
+Data augmentation is the process of artificially generating new data from existing data, primarily to train new machine learning (ML) models. ML models require large and varied datasets for initial training, but sourcing sufficiently diverse real-world datasets can be challenging because of data silos, regulations, and other limitations. Data augmentation artificially increases the dataset by making small changes to the original data.
+
+AugmentAid implements two data augimentation tehniques emplying a <b><i>Generative Adversarial Network(GAN)</i></b> and an <b><i>Variational AutoEncoder</i></b> to generate new images similar to the <b>FashionMNIST</b> dataset images in order to asses the impact of this techniques on a simple classification model. 
 
 ## ⚡ Quick Start <a name="quick_start"></a>
 
