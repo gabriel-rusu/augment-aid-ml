@@ -3,10 +3,10 @@
  <img width=200px height=200px src="./assets/logo.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">AugmentAid</h3>
+<h3 align="center">Augment Aid</h3>
 
 
-<p align="center"> AugmentAid is a machine learning project focused on data augmentation techniques. The project aims to enhance the performance of machine learning models by artificially expanding the training dataset. AugmentAid can generate new, diverse examples that help improve model robustness and generalization by applying various transformations to the existing data.
+<p align="center"> Augment Aid is a machine learning project focused on data augmentation techniques. The project aims to enhance the performance of machine learning models by artificially expanding the training dataset. Augment Aid can generate new, diverse examples that help improve model robustness and generalization by applying various transformations to the existing data.
     <br> 
 </p>
 
