@@ -63,9 +63,6 @@ End with an example of getting some data out of the system or using it for a lit
 ## 🎈 Usage <a name="usage"></a>
 Add notes about how to use the system.
 
-## 🚀 Deployment <a name = "deployment"></a>
-Add additional notes about how to deploy this on a live system.
-
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [PyTorch](https://pytorch.org/) - machine learning framework
 - [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/) - deep learning framework
