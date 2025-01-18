@@ -72,10 +72,10 @@ Add additional notes about how to deploy this on a live system.
 - [Jupyter Notebook](https://jupyter.org/) - web application for creating and sharing computational documents
 
 ## 📑 Documentation <a name="documentation"></a>
-- The papers studied in order to implement the model are:
+- [Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661)
+- [Auto-Encoding Variational Bayes](https://arxiv.org/pdf/1312.6114)
+- [Image Data Augmentation for Deep Learning: A Survey](https://arxiv.org/pdf/2204.08610)
+- [The Effectiveness of Data Augmentation in Image Classification using Deep Learning](https://arxiv.org/pdf/1712.04621)
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@gabriel-rusu](https://github.com/gabriel-rusu) - Idea & Initial work
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-- Hat tip to anyone whose code was used
