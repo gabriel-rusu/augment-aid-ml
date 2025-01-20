@@ -35,6 +35,8 @@ Want to play with these notebooks online without having to install anything? Use
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 -c pytorch -c nvidia
+conda install lightning==2.5.0.post0 -c conda-forge
 
 ### Prerequisites
 What things you need to install the software and how to install them.
