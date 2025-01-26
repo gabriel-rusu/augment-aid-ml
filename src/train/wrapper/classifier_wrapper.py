@@ -16,10 +16,6 @@ class ClassifierWrapper(L.LightningModule):
 
     def training_step(self, batch, batch_idx):
         x, y = batch
-
-        one_hot_y = F.one_hot(y, self.num_classes).float()
-        # image_one_hot_y = one_hot_y[:, :, None, None].repeat(1, 1, x.shape[2], x.shape[3])
-
         if self.image_enhancer is not None:
             x = self.image_enhancer(y)
 
@@ -34,11 +30,7 @@ class ClassifierWrapper(L.LightningModule):
         return loss
 
     def validation_step(self, batch, batch_idx):
-
         x, y = batch
-
-        one_hot_y = F.one_hot(y, self.num_classes).float()
-
         if self.image_enhancer is not None:
             x = self.image_enhancer(y)
 
@@ -47,7 +39,6 @@ class ClassifierWrapper(L.LightningModule):
         loss = F.cross_entropy(output, y)
 
         self.log('val_acc', torch.sum(pred == y).item() / (len(y)), reduce_fx='mean', prog_bar=True)
-
         self.log('val_loss', loss, reduce_fx='mean', prog_bar=True)
 
         return loss

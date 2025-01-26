@@ -45,3 +45,6 @@ class FashionMNISTDataModule(lightning.LightningDataModule):
 
     def dataset_classes(self):
         return self._classes
+
+    def num_classes(self):
+        return len(self._classes)

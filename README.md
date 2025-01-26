@@ -44,6 +44,10 @@ What things you need to install the software and how to install them.
 conda create -n augment-aid -y python=3.11 pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 lightning==2.5.0.post0 -c pytorch -c nvidia -c conda-forge
 ```
 
+```bash
+conda env create -f environment.yml -y
+```
+
 ### Installing
 A step-by-step series of examples that tell you how to get a development env running.
 
@@ -55,8 +59,8 @@ pip install -v -e .
 
 And repeat
 
-```
-until finished
+```bash
+conda remove -y --name augment-aid-test --all
 ```
 
 End with an example of getting some data out of the system or using it for a little demo.
