@@ -17,8 +17,10 @@ class FashionMNISTDataModule(lightning.LightningDataModule):
     def setup(self, stage: str):
         self.mnist_train = FashionMNIST(self.dataset_dir, train=True, transform=self.data_transforms(True),
                                         download=True)
+        self.mnist_train_unaltered = FashionMNIST(self.dataset_dir, train=True, transform=self.data_transforms(False),
+                                        download=True)
         self.mnist_validation = FashionMNIST(self.dataset_dir, train=False, transform=self.data_transforms(False),
-                                                       download=True)
+                                             download=True)
 
     def data_transforms(self, train=False):
         transform = [
@@ -29,9 +31,9 @@ class FashionMNISTDataModule(lightning.LightningDataModule):
 
         if train:
             transform = [
-                RandomVerticalFlip(),
-                RandomHorizontalFlip()
-            ] + transform
+                            RandomVerticalFlip(),
+                            RandomHorizontalFlip()
+                        ] + transform
 
         return Compose(transform)
 
@@ -41,6 +43,10 @@ class FashionMNISTDataModule(lightning.LightningDataModule):
 
     def val_dataloader(self):
         return DataLoader(self.mnist_validation, batch_size=self.batch_size, num_workers=4,
+                          persistent_workers=True)
+
+    def train_dataloader_unaltered(self):
+        return DataLoader(self.mnist_train_unaltered, batch_size=self.batch_size, shuffle=False, num_workers=4,
                           persistent_workers=True)
 
     def dataset_classes(self):
