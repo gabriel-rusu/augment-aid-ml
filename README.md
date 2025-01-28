@@ -41,11 +41,15 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them.
 
 ```bash
-conda create -n augment-aid -y python=3.11 pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 lightning==2.5.0.post0 -c pytorch -c nvidia -c conda-forge
+conda create -n augment-aid-test -y python=3.11 pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 lightning==2.5.0.post0 -c pytorch -c nvidia -c conda-forge
 ```
 
 ```bash
 conda env create -f environment.yml -y
+```
+
+```bash
+conda env create -f environment-macos.yml -y
 ```
 
 ### Installing
@@ -60,7 +64,7 @@ pip install -v -e .
 And repeat
 
 ```bash
-conda remove -y --name augment-aid-test --all
+conda remove -y --name augment-aid --all
 ```
 
 End with an example of getting some data out of the system or using it for a little demo.
