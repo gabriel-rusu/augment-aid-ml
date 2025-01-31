@@ -19,8 +19,6 @@ class VAEAugmentedTrainingWrapper(L.LightningModule):
 
     def training_step(self, batch, batch_idx):
         x, y = batch
-        batch_size = len(x)
-
         x_orig, y_orig = next(self.train_img_original)
         x_orig = x_orig.to(self.device)
         y_orig = y_orig.to(self.device)
@@ -42,8 +40,6 @@ class VAEAugmentedTrainingWrapper(L.LightningModule):
 
     def validation_step(self, batch, batch_idx):
         x, y = batch
-        batch_size = len(x)
-
         x_orig, y_orig = next(self.valid_img_original)
         x_orig = x_orig.to(self.device)
         y_orig = y_orig.to(self.device)
