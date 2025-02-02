@@ -83,7 +83,7 @@ new training examples in results in classification accuracy/loss are displayed b
 <div style="display: flex; flex-wrap: wrap; padding: 0 4px">
   <div style="flex: 50%; padding: 0 4px">
     <img style="margin-top: 8px;vertical-align: middle; width: 30%" src="./assets/graphs/acc_graph_gan_data_augmentation.png" alt="Accuracy of GAN enhanced classifier training">
-    <img style="margin-top: 8px;vertical-align: middle;  width: 29.5%" src="assets/graphs/acc_graph_vae_data_augmentation.png" alt="Accuracy of VAE enhanced classifier training">
+    <img style="margin-top: 8px;vertical-align: middle;  width: 29%" src="assets/graphs/acc_graph_vae_data_augmentation.png" alt="Accuracy of VAE enhanced classifier training">
     <img style="margin-top: 8px;vertical-align: middle;  width: 30%" src="assets/graphs/acc_graph_without_data_augmentation.png" alt="Accuracy of classifier without augmentation">
   </div>
 </div>
@@ -92,7 +92,7 @@ new training examples in results in classification accuracy/loss are displayed b
 <div style="display: flex; flex-wrap: wrap; padding: 0 4px">
   <div style="flex: 50%; padding: 0 4px">
     <img style="margin-top: 8px;vertical-align: middle; width: 30%" src="./assets/graphs/loss_graph_gan_data_augmentation.png" alt="Loss of GAN enhanced classifier training">
-    <img style="margin-top: 8px;vertical-align: middle;  width: 29.5%" src="assets/graphs/loss_graph_vae_data_augmentation.png" alt="Loss of VAE enhanced classifier training">
+    <img style="margin-top: 8px;vertical-align: middle;  width: 29%" src="assets/graphs/loss_graph_vae_data_augmentation.png" alt="Loss of VAE enhanced classifier training">
     <img style="margin-top: 8px;vertical-align: middle;  width: 30%" src="assets/graphs/loss_graph_without_data_augmentation.png" alt="Loss of classifier without augmentation">
   </div>
 </div>
