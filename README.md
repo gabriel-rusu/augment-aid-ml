@@ -77,7 +77,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 The results of using the GAN and VAE are displayed bellow. After training both to generate 
 new training examples in results in classification accuracy/loss are displayed bellow
-- The following 3 graphs display in order from left to right how the classifier accuracy performed when I performed GAN, VAE and no data augmentation
+- The following 3 graphs display in order from left to right the classifier loss when I trained the classifier with GAN, VAE and no data augmentation
 <div style="display: flex; flex-wrap: wrap; padding: 0 4px">
   <div style="flex: 50%; padding: 0 4px">
     <img style="margin-top: 8px;vertical-align: middle; width: 225px; height: 175px" src="./assets/graphs/acc_graph_gan_data_augmentation.png" alt="Accuracy of GAN enhanced classifier training">
@@ -86,7 +86,7 @@ new training examples in results in classification accuracy/loss are displayed b
   </div>
 </div>
 
-- The following 3 graphs display in order from left to right how the classifier loss performed when I performed GAN, VAE and no data augmentation
+- The following 3 graphs display in order from left to right the classifier loss when I trained the classifier with GAN, VAE and no data augmentation
 <div style="display: flex; flex-wrap: wrap; padding: 0 4px">
   <div style="flex: 50%; padding: 0 4px">
     <img style="margin-top: 8px;vertical-align: middle; width: 225px; height: 175px" src="./assets/graphs/loss_graph_gan_data_augmentation.png" alt="Loss of GAN enhanced classifier training">
