@@ -33,10 +33,6 @@ generator_input_dim = z_dim + datamodule.num_classes()
 input_channels = 1
 discriminator_input_dim = input_channels + datamodule.num_classes()
 
-###Visualizing the data
-
-show_train_images_sample(datamodule)
-
 ###Defining the model
 
 generator = Generator(generator_input_dim, input_channels)

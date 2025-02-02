@@ -27,10 +27,6 @@ input_dim = 28 * 28
 hidden_dim = 400
 latent_dim = 200
 
-###Visualizing the data
-
-show_train_images_sample(datamodule)
-
 ###Defining the model
 
 from src.train.wrapper.vae_wrapper import VAEWrapper
