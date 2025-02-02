@@ -33,7 +33,8 @@ order to asses the impact of this techniques on a simple classification model.
 
 ## ⚡ Quick Start <a name="quick_start"></a>
 
-Want to play with these notebooks online without having to install anything? Use any of the following services.
+Want to play with these notebooks online without having to install anything? You can use Google Colab:
+  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gabriel-rusu/augment-aid-ml/blob/main/src/notebooks/colab-training.ipynb)
 
 <b>WARNING:</b> Please be aware that these services provide temporary environments: anything you do will be deleted
 after a while, so make sure you download any data you care about.
@@ -41,37 +42,33 @@ after a while, so make sure you download any data you care about.
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing
-purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```bash
-conda env create -f environment.yml -y
-```
-
-```bash
-conda env create -f environment-macos.yml -y
-```
+purposes.
 
 ### Installing
 
-A step-by-step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```bash
-pip install -v -e .
-```
-
-And repeat
-
+To run the project you must first create a dedicated conda environment. You can do this 
+by running on of the following commands based on your platform:
+- Windows/Linux:
+  ```bash
+    conda env create -f environment.yml -y
+    ```
+- MacOS
+    ```bash
+    conda env create -f environment-macos.yml -y
+    ```
+  
+After the previous command finished executing you should have 
+a new ___augment-aid___ conda environment. If something gone wrong or you run the wrong command you can use the following 
+command to delete the previously created environment and repeat the first step
 ```bash
 conda remove -y --name augment-aid --all
 ```
-
-End with an example of getting some data out of the system or using it for a little demo.
+The final step is to run the following command:
+```bash
+pip install -v -e .
+```
+If all commands run smoothly you can now run/modify any notebook
+form the project.
 
 ## 🎈 Usage <a name="usage"></a>
 
