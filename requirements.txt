@@ -1,6 +1,0 @@
-matplotlib==3.8.0
-jupyter
-tensorboard
-numpy==1.26.3
-pandas
-scipy
