@@ -50,10 +50,6 @@ purposes. See [deployment](#deployment) for notes on how to deploy the project o
 What things you need to install the software and how to install them.
 
 ```bash
-conda create -n augment-aid-test -y python=3.11 pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 lightning==2.5.0.post0 -c pytorch -c nvidia -c conda-forge
-```
-
-```bash
 conda env create -f environment.yml -y
 ```
 
@@ -81,14 +77,37 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+The results of using the GAN and VAE are displayed bellow. After training both to generate 
+new training examples in results in classification accuracy/loss are displayed bellow
+- The following 3 graphs display in order from left to right how the classifier accuracy performed when I performed GAN, VAE and no data augmentation
 <div style="display: flex; flex-wrap: wrap; padding: 0 4px">
   <div style="flex: 50%; padding: 0 4px">
-    <img style="margin-top: 8px;vertical-align: middle; width: 50%" src="./assets/graphs/acc_graph_gan_data_augumentation.png">
-    <img style="margin-top: 8px;vertical-align: middle;  width: 50%" src="./assets/graphs/acc_graph_vae_data_augumentation.png">
-    <img style="margin-top: 8px;vertical-align: middle;  width: 50%" src="./assets/graphs/acc_graph_without_data_augumentation.png">
+    <img style="margin-top: 8px;vertical-align: middle; width: 30%" src="./assets/graphs/acc_graph_gan_data_augmentation.png" alt="Accuracy of GAN enhanced classifier training">
+    <img style="margin-top: 8px;vertical-align: middle;  width: 29.5%" src="assets/graphs/acc_graph_vae_data_augmentation.png" alt="Accuracy of VAE enhanced classifier training">
+    <img style="margin-top: 8px;vertical-align: middle;  width: 30%" src="assets/graphs/acc_graph_without_data_augmentation.png" alt="Accuracy of classifier without augmentation">
   </div>
 </div>
+
+- The following 3 graphs display in order from left to right how the classifier loss performed when I performed GAN, VAE and no data augmentation
+<div style="display: flex; flex-wrap: wrap; padding: 0 4px">
+  <div style="flex: 50%; padding: 0 4px">
+    <img style="margin-top: 8px;vertical-align: middle; width: 30%" src="./assets/graphs/loss_graph_gan_data_augmentation.png" alt="Loss of GAN enhanced classifier training">
+    <img style="margin-top: 8px;vertical-align: middle;  width: 29.5%" src="assets/graphs/loss_graph_vae_data_augmentation.png" alt="Loss of VAE enhanced classifier training">
+    <img style="margin-top: 8px;vertical-align: middle;  width: 30%" src="assets/graphs/loss_graph_without_data_augmentation.png" alt="Loss of classifier without augmentation">
+  </div>
+</div>
+
+If you want to apply data augmentation to your classifier you can start by replacing in the notebooks the simple 
+ResNet 18 classifier used by me, with the classifier you want to use. After replacing the classifier you can implement 
+your own datamodule to handle your dataset and the notebooks should start training your classifier with and without data
+augmentation.
+
+#### Suggested order of running the notebooks:
+- [image-classification](src/notebooks/image-classification.ipynb)
+- [gan-training](src/notebooks/gan-training.ipynb)
+- [gan-enhanced-image-classification](src/notebooks/gan-enhanced-image-classification.ipynb)
+- [vae-training](src/notebooks/vae-training.ipynb)
+- [vae-enhanced-image-classification](src/notebooks/vae-enhanced-image-classification.ipynb)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
